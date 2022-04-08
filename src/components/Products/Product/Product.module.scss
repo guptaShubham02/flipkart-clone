@@ -1,0 +1,15 @@
+.productImage {
+  height: 200px;
+}
+
+// .productBox {
+//   padding: 0 !important;
+//   margin-top: 32px;
+//   margin-left: 32px;
+// }
+
+.productBox:hover {
+  transform: scale(1.05);
+  transition: all 0.3s;
+  box-shadow: 4px 0px 9px #00000030;
+}

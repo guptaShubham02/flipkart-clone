@@ -1,24 +1,65 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+
+import "./App.css";
+import Navbar from "./components/Navbar/Navbar";
+import Products from "./components/Products/Products";
+import Cart from "./components/Cart/Cart";
+import CheckOut from "./components/CheckOut/CheckOut";
 
 function App() {
+  const [showCart, setShowCart] = useState(false);
+  const [showCheckout, setShowCheckout] = useState(false);
+  const [cart, setCart] = useState([]);
+
+  const addToCartHandler = (item) => {
+    if (cart.indexOf(item) !== -1) return;
+    setCart([...cart, item]);
+  };
+
+  const handleChange = (item, quantity) => {
+    const ind = cart.indexOf(item);
+    const arr = cart;
+    arr[ind].amount += quantity;
+
+    if (arr[ind].amount === 0) arr[ind].amount = 1;
+    setCart([...arr]);
+  };
+
+  const showCartHandler = () => {
+    setShowCart(true);
+  };
+
+  const hideCartHandler = () => {
+    setShowCart(false);
+    setShowCheckout(false);
+  };
+
+  const showCheckoutHandler = () => {
+    setShowCart(false);
+    setShowCheckout(true);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar
+        cartItem={cart.length}
+        showCart={showCartHandler}
+        hideCart={hideCartHandler}
+      />
+      {showCart && (
+        <Cart
+          cart={cart}
+          onClose={hideCartHandler}
+          add={handleChange}
+          setCart={setCart}
+          cartItem={cart.length}
+          showCheckout={showCheckoutHandler}
+        />
+      )}
+
+      {showCheckout && <CheckOut onClose={hideCartHandler} />}
+      <Products onClick={addToCartHandler} />
+    </>
   );
 }
 

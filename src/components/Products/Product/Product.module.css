@@ -1,0 +1,13 @@
+.productImage {
+  height: 200px;
+}
+
+.productBox:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-box-shadow: 4px 0px 9px #00000030;
+          box-shadow: 4px 0px 9px #00000030;
+}
+/*# sourceMappingURL=Product.module.css.map */
