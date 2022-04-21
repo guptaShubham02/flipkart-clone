@@ -34,7 +34,7 @@ const Filter = (props) => {
                 size="small"
                 sx={{ flexDirection: "column" }}
               >
-                <img src={topOffers} />
+                <img src={topOffers} alt='Top Offers' />
                 <Typography>Top Offers</Typography>
               </Button>
             </Grid>
@@ -45,7 +45,7 @@ const Filter = (props) => {
                 size="small"
                 sx={{ flexDirection: "column" }}
               >
-                <img src={mobiles} />
+                <img src={mobiles} alt='Mobiles' />
                 <Typography>Mobiles</Typography>
               </Button>
             </Grid>
@@ -56,7 +56,7 @@ const Filter = (props) => {
                 size="small"
                 sx={{ flexDirection: "column" }}
               >
-                <img src={electronics} />
+                <img src={electronics}  alt='Electronics'/>
                 <Typography>Electronics</Typography>
               </Button>
             </Grid>
@@ -67,8 +67,8 @@ const Filter = (props) => {
                 size="small"
                 sx={{ flexDirection: "column" }}
               >
-                <img src={men} />
-                <Typography>Men's </Typography>
+                <img src={men}  alt='Men'/>
+                <Typography>Men </Typography>
               </Button>
             </Grid>
             <Grid item>
@@ -78,8 +78,8 @@ const Filter = (props) => {
                 size="small"
                 sx={{ flexDirection: "column" }}
               >
-                <img src={women} />
-                <Typography>Women's </Typography>
+                <img src={women} alt='Women' />
+                <Typography>Women </Typography>
               </Button>
             </Grid>
             <Grid item>
@@ -89,7 +89,7 @@ const Filter = (props) => {
                 size="small"
                 sx={{ flexDirection: "column" }}
               >
-                <img src={jwellery} />
+                <img src={jwellery} alt='Jwellery' />
                 <Typography>Jwellery</Typography>
               </Button>
             </Grid>

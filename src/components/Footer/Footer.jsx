@@ -11,25 +11,25 @@ const Footer = () => {
         {/* <!-- footer-top --> */}
         <div className="row pt-5 pb-4 footer-top">
           <div className="col-md-6">
-            <img src={logo} style={{ width: "150px" }} />
+            <img src={logo} style={{ width: "150px" }} alt='Flipkart' />
           </div>
           <div className="col-md-6 pt-4 pt-md-0">
             <div className="footer-social text-md-end">
-              <a href="#">
+              <button href="#">
                 <i className="fab fa-facebook-f"></i>
-              </a>
-              <a href="#">
+              </button>
+              <button href="#">
                 <i className="fab fa-twitter"></i>
-              </a>
-              <a href="#">
+              </button>
+              <button href="#">
                 <i className="fab fa-dribbble"></i>
-              </a>
-              <a href="#">
+              </button>
+              <button href="#">
                 <i className="fab fa-instagram"></i>
-              </a>
-              <a href="#">
+              </button>
+              <button href="#">
                 <i className="fab fa-youtube"></i>
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -49,24 +49,24 @@ const Footer = () => {
               <br />
               Karnataka, India
             </p>
-            <a href="#" className="text-white">
+            <button href="#" className="text-white">
               Read more &#8594;
-            </a>
+            </button>
           </div>
           <div className="col-lg-2 col-sm-3">
             <h5>ABOUT</h5>
             <ul>
               <li>
-                <a href="#">Contact Us</a>
+                <button href="#">Contact Us</button>
               </li>
               <li>
-                <a href="#">About Us</a>
+                <button href="#">About Us</button>
               </li>
               <li>
-                <a href="#">Careers</a>
+                <button href="#">Careers</button>
               </li>
               <li>
-                <a href="#">Flipkart Stories</a>
+                <button href="#">Flipkart Stories</button>
               </li>
             </ul>
           </div>
@@ -74,19 +74,19 @@ const Footer = () => {
             <h5>POLICY</h5>
             <ul>
               <li>
-                <a href="#">Return Policy</a>
+                <button href="#">Return Policy</button>
               </li>
               <li>
-                <a href="#">Terms Of Use</a>
+                <button href="#">Terms Of Use</button>
               </li>
               <li>
-                <a href="#">Security</a>
+                <button href="#">Security</button>
               </li>
               <li>
-                <a href="#">Privacy</a>
+                <button href="#">Privacy</button>
               </li>
               <li>
-                <a href="#">Sitemap</a>
+                <button href="#">Sitemap</button>
               </li>
             </ul>
           </div>
@@ -110,16 +110,17 @@ const Footer = () => {
           <p>
             Copyright &copy; 2022 All rights reserved | This template is made
             with &nbsp;
-            <a
+            <button
               href="https://www.linkedin.com/in/shubham-gupta-755690229/"
               target="_blank"
+              rel="noopener"
             >
               <i className="fa-solid fa-mug-saucer"></i>
-            </a>{" "}
+            </button>{" "}
             &nbsp; by &nbsp;
-            <a href="https://www.facebook.com/suvm.02" target="_blank">
+            <button href="https://www.facebook.com/suvm.02" target="_blank" rel="noopener">
               Suvm
-            </a>
+            </button>
           </p>
           <img src={payment} alt="Payment Mode" />
         </div>

@@ -4,8 +4,7 @@ import React from "react";
 import Zoom from "react-img-zoom";
 
 const ProductInformation = (props) => {
-  const { title, price, description, category, image } =
-    props.productInformation;
+  const { title, price, description, image } = props.productInformation;
   return (
     <>
       <Card sx={{ mt: 3, mx: 6 }}>
@@ -21,7 +20,7 @@ const ProductInformation = (props) => {
               {description}
             </Typography>
             <Typography sx={{ color: "purple" }}>
-              {(Math.random()*5).toFixed(1) } Rating{" "}
+              {(Math.random() * 5).toFixed(1)} Rating{" "}
               {Math.floor(Math.random() * Math.floor(Math.random() * 10000))}{" "}
               Reviews
             </Typography>

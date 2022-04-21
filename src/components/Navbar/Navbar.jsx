@@ -10,7 +10,7 @@ const Navbar = ({
   hideCart,
   setSearchFilter,
   searchFilter,
-  ProductInformationHandler
+  ProductInformationHandler,
 }) => {
   const cartIsFill =
     cartItem <= 0 ? (
@@ -26,7 +26,7 @@ const Navbar = ({
     );
 
   const searchItem = JsonData.filter((val) => {
-    if (searchFilter == "") {
+    if (searchFilter === "") {
       return;
     } else if (val.title.toLowerCase().includes(searchFilter.toLowerCase())) {
       return val;
@@ -41,10 +41,11 @@ const Navbar = ({
 
     return (
       <p key={key}>
-        <button onClick={()=>ProductInformationHandler(item)}>
-          <img src={item.image} />
+        <button onClick={() => ProductInformationHandler(item)}>
+          <img src={item.image} alt={item.category} />
           <p>
-            {(item.title).slice(0,55)}<br/>
+            {item.title.slice(0, 55)}
+            <br />
             <span>in {item.category}</span>
           </p>
         </button>
