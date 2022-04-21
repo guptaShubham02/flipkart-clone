@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Box, Button, Typography, CardMedia } from "@mui/material";
+import { Box, Button, Typography, CardMedia, IconButton, Grid } from "@mui/material";
 import classes from "./Cart.module.css";
 import Modal from "../UI/Modal/Modal";
-import { Delete } from "@mui/icons-material";
+import { AddCircleOutlineSharp, Delete, RemoveCircleOutlineSharp } from "@mui/icons-material";
 import cartImg from "../../assest/cart.webp";
 
 const Cart = ({ cart, onClose, add, setCart, cartItem, showCheckout }) => {
@@ -44,45 +44,46 @@ const Cart = ({ cart, onClose, add, setCart, cartItem, showCheckout }) => {
           const maxItemButton = amount >= 5 ? true : false;
 
           return (
-            <div px={5} my={4} key={id} className={classes.cartItem}>
-              <div>
+            <Grid container px={3} my={4} key={id} className={classes.cartItem}>
+              <Grid item lg={2} md={1}>
                 <CardMedia
                   image={image}
-                  sx={{ width: 100, height: 100, marginLeft: "10px" }}
+                  className={classes.productImage}
                 />
-              </div>
-              <div className={classes.cartTitle}>{title}</div>
-              <div className={classes.cartAmount}>
+              </Grid>
+              <Grid item lg={5} md={5} className={classes.cartTitle}>{title}</Grid>
+              <Grid item lg={5} md={6} className={classes.cartAmount}>
                 <div>
-                  <Button
+                  <IconButton  color="primary"
                     onClick={() => {
                       add(item, -1);
                     }}
                     disabled={disableButton}
                   >
-                    -
-                  </Button>
-                  {amount}
-                  <Button
+                    <RemoveCircleOutlineSharp/>
+                  </IconButton>
+                  &nbsp;
+                  {amount}&nbsp;
+                  <IconButton  color="primary"
                     onClick={() => {
                       add(item, 1);
                     }}
                     disabled={maxItemButton}
                   >
-                    +
-                  </Button>
-                  <Button
+                    <AddCircleOutlineSharp />
+                  </IconButton >
+                  <IconButton
                     sx={{ color: "#ee3232" }}
                     onClick={() => {
                       handleRemove(id);
                     }}
                   >
                     <Delete />
-                  </Button>
+                  </IconButton>
                 </div>
                 <div>{`$ ${(amount * (price - 0.99)).toFixed(2)}`}</div>
-              </div>
-            </div>
+              </Grid>
+            </Grid>
           );
         })}
         <Typography varient="h4" sx={{ textAlign: "right" }} px={5}>

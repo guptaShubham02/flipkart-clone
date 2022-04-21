@@ -1,3 +1,59 @@
 .cartQuantity {
-    background: transparent !important;
+  background: transparent !important;
+}
+
+input[type="search"] {
+  border: none;
+  outline: none !important;
+  width: 100%;
+  height: 37px;
+  padding-left: 44px;
+  position: relative;
+  box-shadow: 0px 3px 8px 0px #00000061;
+}
+.suggestionBox {
+  position: absolute;
+  background: #ffffff;
+  color: black;
+  width: 100%;
+  top: 100%;
+  margin-top: 5px;
+  p {
+    margin-bottom: 0;
+  }
+  button {
+    width: 100%;
+    text-align: left;
+    background: white;
+    color: black;
+    border: none;
+    padding: 0.5em 1em;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    &:hover {
+      background: #2874f014;
+    }
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+    p {
+      display: inline-block;
+      padding-left: 1.5em;
+      span {
+        color: #2874f0;
+        font-size: 0.85em;
+      }
+    }
+  }
+}
+
+.searchIcon {
+  position: absolute;
+  left: 0.2em;
+  top: 0.3em;
+  color: #878787;
 }

@@ -1,0 +1,152 @@
+.footer {
+  background: #172337;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer h5 {
+  color: #fff;
+  font-weight: 700;
+  font-family: "play", sans-serif;
+  margin-bottom: 35px;
+}
+
+.footer p {
+  color: #adadad;
+  font-weight: 300;
+  line-height: 26px;
+  margin-bottom: 20px;
+}
+
+.footer-top {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-social a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  font-size: 15px;
+  color: #ffffff !important;
+}
+
+.footer-social a:not(:last-child) {
+  margin-right: 6px;
+}
+
+.footer-body {
+  padding-top: 45px;
+  padding-bottom: 35px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-body ul {
+  padding-left: 0 !important;
+}
+
+.footer-body li a {
+  color: #adadad;
+  line-height: 32px;
+  font-weight: 300;
+}
+
+.footer-body form input[type="text"] {
+  padding: 1px 2px 1px 20px;
+  background-color: transparent;
+  height: 50px;
+  width: 100%;
+  border: 1px solid #544e5e;
+  color: #adadad;
+}
+
+.footer-body form input[type="text"]:focus {
+  outline: none;
+}
+
+.footer-body form {
+  position: relative;
+}
+
+.footer-body form button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 50px;
+  width: 50px;
+  background: #00bfe7;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+}
+
+.footer-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.footer-bottom p {
+  margin-bottom: 0 !important;
+}
+
+.footer-bottom a {
+  display: inline-block;
+  color: #fff;
+  position: relative;
+}
+
+.footer-bottom p a:first-child::after {
+  content: "\\\\";
+  position: absolute;
+  color: #97e5f4bf;
+  font-size: 8px;
+  left: 3px;
+  bottom: 50%;
+  -webkit-animation: tea 2s linear infinite;
+          animation: tea 2s linear infinite;
+}
+
+@-webkit-keyframes tea {
+  0% {
+    left: 3px;
+    bottom: 50%;
+    color: #fff;
+  }
+  50% {
+    left: 5px;
+    bottom: 60%;
+    color: #97e5f47d;
+  }
+  100% {
+    left: 10px;
+    bottom: 82%;
+    color: #f4f4f469;
+  }
+}
+
+@keyframes tea {
+  0% {
+    left: 3px;
+    bottom: 50%;
+    color: #fff;
+  }
+  50% {
+    left: 5px;
+    bottom: 60%;
+    color: #97e5f47d;
+  }
+  100% {
+    left: 10px;
+    bottom: 82%;
+    color: #f4f4f469;
+  }
+}
+/*# sourceMappingURL=Footer.css.map */

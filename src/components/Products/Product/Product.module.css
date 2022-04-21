@@ -1,13 +1,41 @@
-.productImage {
-  height: 200px;
+.productBox {
+  margin-bottom: 20px;
+  cursor: pointer !important;
 }
 
-.productBox:hover {
+.productImage {
+  height: 120px !important;
+  width: 120px !important;
+}
+
+.productTitle {
+  padding: 0.5rem 1.3rem !important;
+}
+
+.productTitle p {
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  color: #232323db !important;
+  line-height: 1.5;
+}
+
+.productBox:hover .productImage {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   -webkit-box-shadow: 4px 0px 9px #00000030;
           box-shadow: 4px 0px 9px #00000030;
+}
+
+.productCard:hover {
+  -webkit-box-shadow: 0 0 8px 0px #66636345;
+          box-shadow: 0 0 8px 0px #66636345;
+}
+
+.discount {
+  font-size: 1rem;
+  color: #757676;
+  padding-left: 1rem;
 }
 /*# sourceMappingURL=Product.module.css.map */

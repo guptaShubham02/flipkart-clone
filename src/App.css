@@ -6,15 +6,16 @@
 
 body {
     /* background-color: rgba(218, 216, 215, 0.393); */
-    background-color: rgb(219 222 191 / 14%);
+    background-color: rgba(131, 131, 131, 0.14);
 }
 
 .navbar {
     background-color: #2874F0;
     color: aliceblue;
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
+    z-index: 10;
 }
 
 .navbar button {

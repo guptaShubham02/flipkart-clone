@@ -1,0 +1,21 @@
+.filterItems {
+  text-align: center;
+}
+
+.filterItems img {
+  width: 64px;
+  height: 64px;
+}
+
+.filterButton p {
+  font-weight: 700;
+  font-size: 0.84rem;
+  color: #3c3a3ae0;
+  line-height: 2.5;
+  letter-spacing: 0px;
+  text-transform: capitalize;
+}
+
+.filterButton:hover p {
+  color: #2874f0;
+}
